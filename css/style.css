@@ -208,7 +208,7 @@ label {
 
 /* line 110, ../../Arafath/CL/january 2020/242. charity/HTML/scss/_theme-default.scss */
 h3 {
-  font-size: 24px;
+  font-size: 4px;
 }
 
 /* line 114, ../../Arafath/CL/january 2020/242. charity/HTML/scss/_theme-default.scss */
@@ -997,6 +997,7 @@ h3 {
   }
 }
 
+
 /* line 72, ../../Arafath/CL/january 2020/242. charity/HTML/scss/_slick-nav.scss */
 .slicknav_nav .slicknav_arrow {
   float: right;
@@ -1136,7 +1137,19 @@ body {
 }
 /* line 1, ../../Arafath/CL/january 2020/242. charity/HTML/scss/_slider.scss */
 .slider_bg_1 {
+  position: relative;
   background-image: url(../img/banner/Home_Page_img.jpeg);
+  background-size: cover;
+  background-position: center;
+}
+
+/* black overlay */
+.slider_bg_1::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1;
 }
 
 /* line 4, ../../Arafath/CL/january 2020/242. charity/HTML/scss/_slider.scss */
@@ -1180,7 +1193,7 @@ body {
 .slider_area .single_slider .slider_text h3 {
   color: #fff;
   font-family: "Yeseva One", cursive;
-  font-size: 84px;
+  font-size: 54px;
   margin-top: 6px;
   margin-bottom: 9px;
   line-height: 1.14;
@@ -2553,7 +2566,7 @@ body {
   margin-bottom: 15px;
   border-radius: 50%;
   overflow: hidden;
-  background: #fff; /* gives clean border feel */
+  background: #fff; 
   display: flex;
   align-items: center;
   justify-content: center;
@@ -2573,8 +2586,8 @@ body {
   text-align: left;
   display: flex;
   flex-direction: column;
-  background: #3CC78F;   /* your theme green */
-  color: #fff;           /* text visible on green */
+  background: #3CC78F; 
+  color: #fff; 
 }
 
 /* line 34, ../../Arafath/CL/january 2020/242. charity/HTML/scss/_reason.scss */
@@ -3165,6 +3178,90 @@ body {
 }
 
 /*What they say end*/
+
+/*Children Photos start*/
+/* Section */
+.kids_section {
+  padding: 60px 0;
+  text-align: center;
+  background: #f9f9f9;
+}
+
+/* Slider */
+.slider {
+  overflow: hidden;
+  width: 100%;
+}
+
+/* Moving track */
+.slide_track {
+  display: flex;
+  width: calc(250px * 10);
+  animation: scroll 25s linear infinite;
+}
+
+/* Each slide */
+.kids_section {
+  padding: 60px 0;
+  text-align: center;
+  background: #f9f9f9;
+}
+
+/* slider container */
+.slider {
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  display: flex;
+  justify-content: center;
+}
+
+/* hide scrollbar */
+.slider::-webkit-scrollbar {
+  display: none;
+}
+
+/* slides wrapper */
+.slides {
+  display: flex;
+  gap: 20px;
+}
+
+/* each slide */
+.slide {
+  flex: 0 0 250px;
+  scroll-snap-align: center;
+  transition: transform 0.5s ease, opacity 0.5s ease;
+}
+
+/* image */
+.slide img {
+  width: 100%;
+  border-radius: 12px;
+  object-fit: cover;
+}
+
+/* default (side images) */
+.slide {
+  transform: scale(0.8);
+}
+
+/* center image (MAIN MAGIC) */
+.slide:focus-within,
+.slide:hover {
+  transform: scale(1);
+  opacity: 1;
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+/*Children Photos End*/
 
 /* line 2, ../../Arafath/CL/january 2020/242. charity/HTML/scss/_counter.scss */
 .counter_area .counter_bg {
