@@ -1,0 +1,219 @@
+/* NAVIGATION DROPDOWN & SUB-SUBMENU CSS FIXES */
+
+/* Main Menu Navigation */
+.main-menu ul {
+  position: relative;
+}
+
+.main-menu ul li {
+  position: relative;
+  display: inline-block;
+}
+
+.main-menu ul li > a {
+  position: relative;
+  display: block;
+  padding: 0px 0px;
+}
+
+/* Submenu styling */
+.main-menu .submenu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: #fff;
+  min-width: 200px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-10px);
+  transition: all 0.3s ease;
+  z-index: 1000;
+  border-radius: 4px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+  margin-top: 5px;
+}
+
+.main-menu ul li:hover > .submenu {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+  margin-top: 0;
+}
+
+.main-menu .submenu li {
+  display: block;
+  position: relative;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.main-menu .submenu li:last-child {
+  border-bottom: none;
+}
+
+.main-menu .submenu li a {
+  display: block;
+  padding: 12px 20px;
+  color: #333;
+  font-size: 16px;
+  font-weight: 400;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.main-menu .submenu li a:hover {
+  background: #f5f5f5;
+  color: #3CC78F;
+  padding-left: 25px;
+}
+
+/* Sub-Submenu (Nested dropdown)*/
+.main-menu .submenu .submenu {
+  top: 0;
+  left: 100%;
+  margin-left: 10px;
+  margin-top: 0;
+  min-width: 180px;
+  transform: translateY(-10px);
+}
+
+.main-menu .submenu li:hover > .submenu {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.main-menu .submenu li .submenu li a {
+  padding: 10px 15px;
+  font-size: 14px;
+}
+
+/* Navigation ID-based menu (for navigation elements) */
+#navigation {
+  position: relative;
+}
+
+#navigation li {
+  position: relative;
+  display: inline-block;
+}
+
+#navigation li > a {
+  position: relative;
+  display: block;
+}
+
+#navigation .submenu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: #fff;
+  min-width: 200px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-10px);
+  transition: all 0.3s ease;
+  z-index: 1000;
+  border-radius: 4px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+  margin-top: 5px;
+}
+
+#navigation li:hover > .submenu {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+  margin-top: 0;
+}
+
+#navigation .submenu li {
+  display: block;
+  position: relative;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+#navigation .submenu li:last-child {
+  border-bottom: none;
+}
+
+#navigation .submenu li a {
+  display: block;
+  padding: 12px 20px;
+  color: #333;
+  font-size: 16px;
+  font-weight: 400;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+#navigation .submenu li a:hover {
+  background: #f5f5f5;
+  color: #3CC78F;
+  padding-left: 25px;
+}
+
+/* Sub-Submenu for ID-based nav */
+#navigation .submenu .submenu {
+  top: 0;
+  left: 100%;
+  margin-left: 10px;
+  margin-top: 0;
+  min-width: 180px;
+  transform: translateY(-10px);
+}
+
+#navigation .submenu li:hover > .submenu {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+#navigation .submenu li .submenu li a {
+  padding: 10px 15px;
+  font-size: 14px;
+}
+
+/* Improve padding and spacing */
+.submenu a i {
+  margin-right: 5px;
+  font-size: 12px;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  .main-menu .submenu,
+  #navigation .submenu {
+    position: static;
+    opacity: 0;
+    visibility: hidden;
+    transform: none;
+    box-shadow: none;
+    border-radius: 0;
+    background: #f9f9f9;
+    margin-left: 20px;
+    max-height: 0;
+    overflow: hidden;
+    transition: all 0.3s ease;
+  }
+
+  .main-menu li:hover > .submenu,
+  #navigation li:hover > .submenu {
+    opacity: 1;
+    visibility: visible;
+    max-height: 500px;
+  }
+
+  .main-menu .submenu .submenu,
+  #navigation .submenu .submenu {
+    left: 0;
+    margin-left: 20px;
+    top: auto;
+  }
+}

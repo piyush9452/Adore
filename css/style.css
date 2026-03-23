@@ -823,7 +823,7 @@ h3 {
 
 /* line 2, ../../Arafath/CL/january 2020/242. charity/HTML/scss/_section_title.scss */
 .section_title h3 {
-  font-size: 40px;
+  font-size: 48px;
   font-weight: 400;
   color: #191d34;
   z-index: 1;
@@ -877,7 +877,7 @@ h3 {
 
 /* line 40, ../../Arafath/CL/january 2020/242. charity/HTML/scss/_section_title.scss */
 .section_title p {
-  font-size: 16px;
+  font-size: 20px;
   color: #6b6a6a;
   line-height: 30px;
   margin-bottom: 0;
@@ -1099,11 +1099,130 @@ body {
   gap: 35px;
 }
 
+.nav_menu ul li {
+  position: relative;
+}
+
 .nav_menu ul li a {
   text-decoration: none;
   color: #fff;
-  font-weight: 500;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 600;
   font-size: 18px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* Arrow styling for menu items with submenu */
+.nav_menu ul li:has(> .submenu) > a::after {
+  content: "\f078";
+  font-family: "FontAwesome";
+  font-weight: normal;
+  font-size: 12px;
+  transition: transform 0.3s ease;
+  display: inline-block;
+  margin-left: 5px;
+}
+
+/* Arrow rotates when submenu is visible */
+.nav_menu ul li:hover > a::after {
+  transform: rotate(180deg);
+}
+
+/* Submenu Dropdown Styling */
+.nav_menu .submenu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: #fff;
+  min-width: 220px;
+  list-style: none;
+  margin: 10px 0 0 0;
+  padding: 10px 0;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-10px);
+  transition: all 0.3s ease;
+  z-index: 1000;
+  border-radius: 4px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+  display: block;
+}
+
+.nav_menu ul li:hover > .submenu {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.nav_menu .submenu li {
+  display: block;
+  position: relative;
+  width: 100%;
+}
+
+.nav_menu .submenu li:hover {
+  background: #f9f9f9;
+}
+
+.nav_menu .submenu li a {
+  display: block;
+  padding: 12px 20px;
+  color: #333;
+  font-family: "Open Sans", sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.nav_menu .submenu li a:hover {
+  background: #efefef;
+  color: #3CC78F;
+  padding-left: 25px;
+}
+
+/* Sub-Submenu (Nested dropdown) Styling */
+.nav_menu .submenu .submenu {
+  top: 0;
+  left: 100%;
+  margin-left: 15px;
+  margin-top: -10px;
+  min-width: 200px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+  display: block;
+}
+
+.nav_menu .submenu li:has(> .submenu) > a {
+  position: relative;
+  padding-right: 20px;
+}
+
+.nav_menu .submenu li:has(> .submenu) > a::after {
+  content: "\f054";
+  font-family: "FontAwesome";
+  font-weight: normal;
+  font-size: 10px;
+  position: absolute;
+  right: 5px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.nav_menu .submenu li:hover > .submenu {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.nav_menu .submenu li .submenu li a {
+  padding: 10px 15px;
+  font-family: "Open Sans", sans-serif;
+  font-size: 13px;
+  font-weight: 400;
+  display: block;
+  width: 100%;
 }
 
 /* Hamburger */
@@ -3823,6 +3942,199 @@ body {
 .text-heading {
   margin-bottom: 30px;
   font-size: 24px;
+}
+
+/* MAIN-MENU & ID-NAVIGATION DROPDOWN */
+
+/* Main Menu Navigation */
+.main-menu ul {
+  position: relative;
+}
+
+.main-menu ul li {
+  position: relative;
+  display: inline-block;
+}
+
+.main-menu ul li > a {
+  position: relative;
+  display: block;
+  padding: 0px 0px;
+}
+
+/* Submenu styling */
+.main-menu .submenu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: #fff;
+  min-width: 200px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-10px);
+  transition: all 0.3s ease;
+  z-index: 1000;
+  border-radius: 4px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+  margin-top: 5px;
+  display: block;
+}
+
+.main-menu ul li:hover > .submenu {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+  margin-top: 0;
+}
+
+.main-menu .submenu li {
+  display: block;
+  position: relative;
+  border-bottom: 1px solid #f0f0f0;
+  width: 100%;
+}
+
+.main-menu .submenu li:last-child {
+  border-bottom: none;
+}
+
+.main-menu .submenu li a {
+  display: block;
+  padding: 12px 20px;
+  color: #333;
+  font-family: "Open Sans", sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.main-menu .submenu li a:hover {
+  background: #f5f5f5;
+  color: #3CC78F;
+  padding-left: 25px;
+}
+
+/* Sub-Submenu  */
+.main-menu .submenu .submenu {
+  top: 0;
+  left: 100%;
+  margin-left: 10px;
+  margin-top: 0;
+  min-width: 180px;
+  transform: translateY(-10px);
+}
+
+.main-menu .submenu li:hover > .submenu {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.main-menu .submenu li .submenu li a {
+  padding: 10px 15px;
+  font-family: "Open Sans", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+/* Navigation ID-based menu (for #navigation elements) */
+#navigation {
+  position: relative;
+}
+
+#navigation li {
+  position: relative;
+  display: inline-block;
+}
+
+#navigation li > a {
+  position: relative;
+  display: block;
+}
+
+/* Submenu styling for #navigation */
+#navigation .submenu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: #fff;
+  min-width: 200px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-10px);
+  transition: all 0.3s ease;
+  z-index: 1000;
+  border-radius: 4px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+  margin-top: 5px;
+  display: block;
+}
+
+#navigation li:hover > .submenu {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+  margin-top: 0;
+}
+
+#navigation .submenu li {
+  display: block;
+  position: relative;
+  border-bottom: 1px solid #f0f0f0;
+  width: 100%;
+}
+
+#navigation .submenu li:last-child {
+  border-bottom: none;
+}
+
+#navigation .submenu li a {
+  display: block;
+  padding: 12px 20px;
+  color: #333;
+  font-family: "Open Sans", sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+#navigation .submenu li a:hover {
+  background: #f5f5f5;
+  color: #3CC78F;
+  padding-left: 25px;
+}
+
+/* Sub-Submenu for ID-based navigation */
+#navigation .submenu .submenu {
+  top: 0;
+  left: 100%;
+  margin-left: 10px;
+  margin-top: 0;
+  min-width: 180px;
+  transform: translateY(-10px);
+}
+
+#navigation .submenu li:hover > .submenu {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+#navigation .submenu li .submenu li a {
+  padding: 10px 15px;
+  font-family: "Open Sans", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
 }
 
 /* line 85, ../../Arafath/CL/january 2020/242. charity/HTML/scss/_elements.scss */
