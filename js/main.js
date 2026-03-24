@@ -293,6 +293,36 @@ $(document).ready(function() {
 	});
 });
 
+// Hamburger Menu Functionality
+$(document).ready(function() {
+    // Toggle mobile menu
+    $('.menu_toggle').on('click', function() {
+        $(this).toggleClass('active');
+        $('.nav_menu').toggleClass('show');
+    });
+
+    // Close mobile menu on close button
+    $('.mobile_menu_close').on('click', function() {
+        $('.menu_toggle').removeClass('active');
+        $('.nav_menu').removeClass('show');
+    });
+
+    // Toggle submenus
+    $('.has-submenu > a').on('click', function(e) {
+        e.preventDefault();
+        $(this).parent().toggleClass('open');
+    });
+
+    // Close menu on link click (non-submenu)
+    $('.nav_menu a').on('click', function() {
+        if (!$(this).siblings('ul').length) {
+            $('.menu_toggle').removeClass('active');
+            $('.nav_menu').removeClass('show');
+            $('.has-submenu').removeClass('open');
+        }
+    });
+});
+
 
 
 //------- Mailchimp js --------//  

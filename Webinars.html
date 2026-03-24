@@ -25,6 +25,7 @@
     <link rel="stylesheet" href="css/slicknav.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/program.css">
+    <link rel="stylesheet" href="css/webinars.css">
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- <link rel="stylesheet" href="css/responsive.css"> -->
@@ -43,46 +44,31 @@
 
             <!-- Logo (you can replace image later) -->
             <div class="logo">
-                <a href="index.html">
-                    <!--<img src="main_loogo.webp" alt="Logo">-->
-                </a>
+            <a href="index.html">
+                <!--<img src="main_loogo.webp" alt="Logo">-->
+            </a>
             </div>
 
             <!-- Navigation -->
             <nav class="nav_menu">
             <ul>
                 <li><a href="index.html">Home</a></li>
-                <li><a href="#">About</a>
+                <li class="has-submenu"><a href="#">About</a>
                     <ul class="submenu">
                         <li><a href="About.html">About Us</a></li>
                         <li><a href="Team.html">Team</a></li>
                     </ul>
                 </li>
-                <li><a href="#">Programs</a>
+                <li class="has-submenu"><a href="#">Programs</a>
                     <ul class="submenu">
                         <li><a href="Young_Leader.html">Young Leaders</a></li>
-                        <li><a href="#">Webinars</a>
-                            <ul class="submenu">
-                                <li><a href="Synergy.html">Synergy</a></li>
-                                <li><a href="Soaring_wings.html">Soaring Wings</a></li>
-                                <li><a href="GYPSE.html">GYPSE</a></li>
-                                <li><a href="WiseTalk.html">WiseTalk</a></li>
-                                <li><a href="XperTalk.html">XperTalk</a></li>
-                                <li><a href="Young_Leader_Speak.html">Young Leader Speak</a></li>
-                                <li><a href="Youth_Impact.html">Youth Impact</a></li>
-                            </ul>
-                        </li>
-                        <li><a href="#">Workshops</a>
-                            <ul class="submenu">
-                                <li><a href="Upcoming_Workshops.html">Upcoming Workshops</a></li>
-                                <li><a href="Past_Workshops.html">Past Workshops</a></li>
-                            </ul>
-                        </li>
+                        <li><a href="Webinars.html">Webinars</a></li>
+                        <li><a href="Workshops.html">Workshops</a></li>
                         <li><a href="E-sessions.html">E-sessions</a></li>
                         <li><a href="Sunshine.html">Sunshine</a></li>
                     </ul>
                 </li>
-                <li><a href="#">Participate</a>
+                <li class="has-submenu"><a href="#">Participate</a>
                     <ul class="submenu">
                         <li><a href="Workshop1.html">Workshop For College Students</a></li>
                         <li><a href="Workshop2.html">Workshop For School Students</a></li>
@@ -91,13 +77,13 @@
                         <li><a href="Workshop5.html">Workshop For Others</a></li>
                     </ul>
                 </li>
-                <li><a href="#">Activities</a>
+                <li class="has-submenu"><a href="#">Activities</a>
                     <ul class="submenu">
                         <li><a href="Upcoming_Activities.html">Upcoming Activities</a></li>
                         <li><a href="Past_Activities.html">Past Activies</a></li>
                     </ul>
                 </li>
-                <li><a href="#">Releases</a>
+                <li class="has-submenu"><a href="#">Releases</a>
                     <ul class="submenu">
                         <li><a href="Blogs.html">Blogs</a></li>
                         <li><a href="Our_Books.html">Our Books</a></li>
@@ -109,7 +95,7 @@
                         <li><a href="YIPs.html">YIP's</a></li>
                     </ul>
                 </li>
-                <li><a href="contact.html">Contact</a>
+                <li class="has-submenu"><a href="contact.html">Contact</a>
                     <ul class="submenu">
                         <li><a href="#">Volunteering</a></li>
                         <li><a href="FAQs.html">FAQ's</a></li>
@@ -124,6 +110,7 @@
                 <span></span>
                 <span></span>
             </div>
+
         </div>
     </header>
     <!-- header-end -->
@@ -135,7 +122,7 @@
             <div class="row">
                 <div class="col-xl-12">
                     <div class="bradcam_text text-center">
-                        <h3>Synergy</h3>
+                        <h3>Webinars</h3>
                     </div>
                 </div>
             </div>
@@ -143,50 +130,159 @@
     </div>
     <!-- bradcam_area_end  -->
 
-
-
-<section class="program_section">
-
-    <!-- Heading -->
-
-    <div class="row justify-content-center">
-      <div class="col-lg-6">
-        <div class="section_title text-center">
-          <h3><span>Synergy</span></h3>
-          <p class="sub_text">Experts From Different domains Connect to Youth and Share their Knowledge</p>
+<section class="webinar-container" id="webinar-overview">
+    <div class="container">
+        <div class="webinar-headline text-center mb-4">
+            <h2>Webinars Arranged By Us</h2>
+            <p>Explore every webinar in our program collection. Scroll or tap a topic to jump directly to the module details.</p>
         </div>
-      </div>
-    </div>
 
-    <!-- Image -->
-    <div class="container image_container">
-        <img src="img/Program_img/Sy.jpeg" alt="Children Image" class="main_image">
-    </div>
+        <div class="flashcard-deck">
+            <a href="#webinar-synergy" class="flashcard">Synergy</a>
+            <a href="#webinar-soaring" class="flashcard">Soaring Wings</a>
+            <a href="#webinar-gypse" class="flashcard">GYPSE</a>
+            <a href="#webinar-wisetalk" class="flashcard">WiseTalk</a>
+            <a href="#webinar-xpertalk" class="flashcard">XperTalk</a>
+            <a href="#webinar-youngspeak" class="flashcard">Young Leader Speak</a>
+            <a href="#webinar-youthimpact" class="flashcard">Youth Impact</a>
+        </div>
 
-    <!-- Divider -->
-    <div class="divider"></div>
+        <div id="webinarCards">
+            <article id="webinar-synergy" class="webinar-card">
+                <div class="img-col"><img src="img/Program_img/Sy.jpeg" alt="Synergy webinar"></div>
+                <div class="content-col">
+                    <h3>Synergy</h3>
+                    <p>Experts from different domains connect with youth and share career-defining insights, creating a networked growth mindset.</p>
+                    <h5>About the program</h5>
+                    <p>The program brings subject-matter experts into a structured conversation for learners aged 15-25.</p>
+                    <h5>Objective</h5>
+                    <ul>
+                        <li>Build competencies through real-world storytelling</li>
+                        <li>Bridge industry-academia understanding</li>
+                        <li>Cultivate confident communication with mentors</li>
+                    </ul>
+                </div>
+            </article>
 
-    <!-- About -->
-    <div class="container content_section">
-        <h2>About the Program</h2>
-        <p>Synergy is a platform which gives an opportunity to the youth to interact with domain experts and learn 
-            from them. We invite professionals who are authorities in their subject to speak to our youth.</p>
-    </div>
+            <article id="webinar-soaring" class="webinar-card reverse">
+                <div class="img-col"><img src="img/Program_img/SW-1.jpeg" alt="Soaring Wings webinar"></div>
+                <div class="content-col">
+                    <h3>Soaring Wings</h3>
+                    <p>A journey-building webinar to help young achievers stand on their own feet with leadership, resilience, and community engagement.</p>
+                    <h5>About the program</h5>
+                    <p>Includes interactive sessions with alumni and leaders from social enterprises.</p>
+                    <h5>Objective</h5>
+                    <ul>
+                        <li>Inspire purposeful planning for long-term goals</li>
+                        <li>Reinforce emotional intelligence and adaptability</li>
+                        <li>Encourage peer collaboration and mentorship</li>
+                    </ul>
+                </div>
+            </article>
 
-    <!-- Divider -->
-    <div class="divider"></div>
+            <article id="webinar-gypse" class="webinar-card">
+                <div class="img-col"><img src="img/Program_img/GYPSE.jpeg" alt="GYPSE webinar"></div>
+                <div class="content-col">
+                    <h3>GYPSE</h3>
+                    <p>Global Youth Program for Social Entrepreneurship (GYPSE) empowers action for social change through project-based learning.</p>
+                    <h5>About the program</h5>
+                    <p>Focused on problem identification, ideation and execution for community impact.</p>
+                    <h5>Objective</h5>
+                    <ul>
+                        <li>Teach sustainable social business viewpoints</li>
+                        <li>Encourage ethical leadership</li>
+                        <li>Enable scalable project planning</li>
+                    </ul>
+                </div>
+            </article>
 
-    <!-- Objective -->
-    <div class="container content_section">
-    <h2>Objective</h2>
+            <article id="webinar-wisetalk" class="webinar-card reverse">
+                <div class="img-col"><img src="img/Program_img/WiseTalk.jpeg" alt="WiseTalk webinar"></div>
+                <div class="content-col">
+                    <h3>WiseTalk</h3>
+                    <p>Thought-provoking conversations with seasoned leaders about decision-making, values, and future-ready skills.</p>
+                    <h5>About the program</h5>
+                    <p>Each session includes Q&A, live polls and actionable frameworks for immediate use.</p>
+                    <h5>Objective</h5>
+                    <ul>
+                        <li>Increase critical thinking and self-reflection</li>
+                        <li>Expand knowledge of emerging trends</li>
+                        <li>Empower clarity in career choice</li>
+                    </ul>
+                </div>
+            </article>
 
-    <ul class="objective_list">
-        <li>To give a platform to the domain experts interact and guide the youth</li>
-        <li>Students derive ideas from the talk for their growth</li>
-        <li>Provide volunteers the opportunity to interact with eminent experts and build in confidence</li>
-    </ul>
+            <article id="webinar-xpertalk" class="webinar-card">
+                <div class="img-col"><img src="img/Program_img/XperTalk.png" alt="XperTalk webinar"></div>
+                <div class="content-col">
+                    <h3>XperTalk</h3>
+                    <p>XperTalk showcases top practitioners explaining domain-specific skills, use-cases, and the future of their industries.</p>
+                    <h5>About the program</h5>
+                    <p>Short, sharp expert drops for busy learners who want concentrated depth.</p>
+                    <h5>Objective</h5>
+                    <ul>
+                        <li>Clarify real-world skill demand</li>
+                        <li>Share rapid learning resources</li>
+                        <li>Increase confidence in skill selection</li>
+                    </ul>
+                </div>
+            </article>
+
+            <article id="webinar-youngspeak" class="webinar-card reverse">
+                <div class="img-col"><img src="img/Program_img/YLSpeak.jpeg" alt="Young Leader Speak webinar"></div>
+                <div class="content-col">
+                    <h3>Young Leader Speak</h3>
+                    <p>A platform for young leaders to present initiatives, reflect on leadership experience, and inspire peers.</p>
+                    <h5>About the program</h5>
+                    <p>Combines public speaking skill development with practical feedback loops.</p>
+                    <h5>Objective</h5>
+                    <ul>
+                        <li>Boost public presentation abilities</li>
+                        <li>Encourage youth-led social projects</li>
+                        <li>Create a confidence-rich community</li>
+                    </ul>
+                </div>
+            </article>
+
+            <article id="webinar-youthimpact" class="webinar-card">
+                <div class="img-col"><img src="img/Program_img/YouthImpact.jpeg" alt="Youth Impact webinar"></div>
+                <div class="content-col">
+                    <h3>Youth Impact</h3>
+                    <p>This webinar outlines the measurable outcomes of youth action and empowers attendees with toolkits for community contribution.</p>
+                    <h5>About the program</h5>
+                    <p>Includes impact stories, research-backed frameworks, and a ready-to-use action plan.</p>
+                    <h5>Objective</h5>
+                    <ul>
+                        <li>Promote social responsibility through hands-on challenges</li>
+                        <li>Share strategies for tracking success metrics</li>
+                        <li>Build shared ecosystem for ongoing support</li>
+                    </ul>
+                </div>
+            </article>
+        </div>
     </div>
 </section>
+
+<script>
+const flashcards = document.querySelectorAll('.flashcard');
+flashcards.forEach(card => card.addEventListener('click', () => {
+    flashcards.forEach(c => c.classList.remove('active'));
+    card.classList.add('active');
+}));
+
+const webinarCards = document.querySelectorAll('.webinar-card');
+const cardObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('show');
+            cardObserver.unobserve(entry.target);
+        }
+    });
+}, {
+    threshold: 0.25
+});
+webinarCards.forEach(card => cardObserver.observe(card));
+</script>
 
 
     <!-- footer_start  -->

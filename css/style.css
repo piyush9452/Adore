@@ -1227,27 +1227,131 @@ body {
 
 /* Hamburger */
 .menu_toggle {
-  display: flex !important;
+  display: none;
   flex-direction: column;
-  justify-content: center;
   cursor: pointer;
-  width: 40px;
-  height: 30px;
-  z-index: 9999;
+  padding: 10px;
+  z-index: 1001;
 }
 
 .menu_toggle span {
   width: 30px;
   height: 4px;
   background: #fff;
-  margin: 4px 0;
-  display: block;
+  margin: 3px 0;
+  transition: 0.3s;
+  border-radius: 2px;
 }
 
-/* Mobile */
-@media (max-width: 768px) {
+.menu_toggle.active span {
+  background: #0f7f3f;
+}
+
+/* Mobile Menu */
+.mobile_menu_overlay {
+  display: none;
+}
+
+@media (max-width: 991px) {
   .nav_menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #fff;
+    z-index: 1000;
+    display: flex !important;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+  }
+
+  .nav_menu.show {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .nav_menu ul {
+    flex-direction: column;
+    list-style: none;
+    padding: 20px 0;
+    margin: 0;
+    text-align: left;
+    width: 100%;
+  }
+
+  .nav_menu ul li {
+    margin: 0;
+    position: relative;
+    border-bottom: 1px solid #0f7f3f;
+  }
+
+  .nav_menu ul li a {
+    color: #0f7f3f;
+    font-size: 20px;
+    font-weight: 600;
+    font-family: "Open Sans", sans-serif;
+    text-decoration: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+  }
+
+  .nav_menu ul li a:hover {
+    color: #0b5f2f;
+  }
+
+  .nav_menu .submenu {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 0 20px;
     display: none;
+    border-left: 2px solid #0f7f3f;
+  }
+
+  .nav_menu .submenu li {
+    margin: 0;
+    border-bottom: 1px solid #0f7f3f;
+  }
+
+  .nav_menu .submenu li a {
+    font-size: 16px;
+    font-weight: 400;
+    padding: 5px 20px;
+  }
+
+  .nav_menu ul li.has-submenu > a::after {
+    content: "▼";
+    font-size: 18px;
+    color: #0f7f3f;
+    transition: transform 0.3s;
+  }
+
+  .nav_menu ul li.has-submenu.open > a::after {
+    transform: rotate(90deg);
+  }
+
+  .nav_menu ul li.has-submenu.open .submenu {
+    display: block;
+  }
+
+  .nav_menu .submenu li.has-submenu > a::after {
+    content: "▼";
+    font-size: 16px;
+    color: #0f7f3f;
+    transition: transform 0.3s;
+  }
+
+  .nav_menu .submenu li.has-submenu.open > a::after {
+    transform: rotate(90deg);
+  }
+
+  .nav_menu .submenu li.has-submenu.open .submenu {
+    display: block;
   }
 
   .menu_toggle {

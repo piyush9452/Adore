@@ -43,46 +43,31 @@
 
             <!-- Logo (you can replace image later) -->
             <div class="logo">
-                <a href="index.html">
-                    <!--<img src="main_loogo.webp" alt="Logo">-->
-                </a>
+            <a href="index.html">
+                <!--<img src="main_loogo.webp" alt="Logo">-->
+            </a>
             </div>
 
             <!-- Navigation -->
             <nav class="nav_menu">
             <ul>
                 <li><a href="index.html">Home</a></li>
-                <li><a href="#">About</a>
+                <li class="has-submenu"><a href="#">About</a>
                     <ul class="submenu">
                         <li><a href="About.html">About Us</a></li>
                         <li><a href="Team.html">Team</a></li>
                     </ul>
                 </li>
-                <li><a href="#">Programs</a>
+                <li class="has-submenu"><a href="#">Programs</a>
                     <ul class="submenu">
                         <li><a href="Young_Leader.html">Young Leaders</a></li>
-                        <li><a href="#">Webinars</a>
-                            <ul class="submenu">
-                                <li><a href="Synergy.html">Synergy</a></li>
-                                <li><a href="Soaring_wings.html">Soaring Wings</a></li>
-                                <li><a href="GYPSE.html">GYPSE</a></li>
-                                <li><a href="WiseTalk.html">WiseTalk</a></li>
-                                <li><a href="XperTalk.html">XperTalk</a></li>
-                                <li><a href="Young_Leader_Speak.html">Young Leader Speak</a></li>
-                                <li><a href="Youth_Impact.html">Youth Impact</a></li>
-                            </ul>
-                        </li>
-                        <li><a href="#">Workshops</a>
-                            <ul class="submenu">
-                                <li><a href="Upcoming_Workshops.html">Upcoming Workshops</a></li>
-                                <li><a href="Past_Workshops.html">Past Workshops</a></li>
-                            </ul>
-                        </li>
+                        <li><a href="Webinars.html">Webinars</a></li>
+                        <li><a href="Workshops.html">Workshops</a></li>
                         <li><a href="E-sessions.html">E-sessions</a></li>
                         <li><a href="Sunshine.html">Sunshine</a></li>
                     </ul>
                 </li>
-                <li><a href="#">Participate</a>
+                <li class="has-submenu"><a href="#">Participate</a>
                     <ul class="submenu">
                         <li><a href="Workshop1.html">Workshop For College Students</a></li>
                         <li><a href="Workshop2.html">Workshop For School Students</a></li>
@@ -91,13 +76,13 @@
                         <li><a href="Workshop5.html">Workshop For Others</a></li>
                     </ul>
                 </li>
-                <li><a href="#">Activities</a>
+                <li class="has-submenu"><a href="#">Activities</a>
                     <ul class="submenu">
                         <li><a href="Upcoming_Activities.html">Upcoming Activities</a></li>
                         <li><a href="Past_Activities.html">Past Activies</a></li>
                     </ul>
                 </li>
-                <li><a href="#">Releases</a>
+                <li class="has-submenu"><a href="#">Releases</a>
                     <ul class="submenu">
                         <li><a href="Blogs.html">Blogs</a></li>
                         <li><a href="Our_Books.html">Our Books</a></li>
@@ -109,7 +94,7 @@
                         <li><a href="YIPs.html">YIP's</a></li>
                     </ul>
                 </li>
-                <li><a href="contact.html">Contact</a>
+                <li class="has-submenu"><a href="contact.html">Contact</a>
                     <ul class="submenu">
                         <li><a href="#">Volunteering</a></li>
                         <li><a href="FAQs.html">FAQ's</a></li>
@@ -124,10 +109,25 @@
                 <span></span>
                 <span></span>
             </div>
+
         </div>
     </header>
     <!-- header-end -->
 
+
+    <style>
+    .topic-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 16px; margin-top: 22px; }
+    .topic-card { background: linear-gradient(150deg, #f1fff4 0%, #f7fff9 100%); border: 1px solid #c9e7d4; border-radius: 14px; padding: 14px 16px; box-shadow: 0 8px 20px rgba(23, 106, 68, 0.16); transition: transform .25s ease, box-shadow .25s ease; }
+    .topic-card:hover { transform: translateY(-4px); box-shadow: 0 12px 27px rgba(21, 110, 68, 0.28); }
+    .topic-card h5 { color: #0d5f35; font-size: 1rem; font-weight: 700; margin-bottom: 8px; }
+    .topic-card p { color: #2e6b4c; font-size: .94rem; margin: 0; }
+    .topic-card.more { border-style: dashed; }
+
+    @media (max-width: 767px) {
+      .topic-grid { grid-template-columns: repeat(1, minmax(0, 1fr)); }
+      .topic-card { padding: 13px 12px; }
+    }
+    </style>
 
     <!-- bradcam_area_start  -->
     <div class="bradcam_area breadcam_bg overlay d-flex align-items-center justify-content-center">
@@ -135,7 +135,7 @@
             <div class="row">
                 <div class="col-xl-12">
                     <div class="bradcam_text text-center">
-                        <h3>GYPSE</h3>
+                        <h3>E-SESSIONS</h3>
                     </div>
                 </div>
             </div>
@@ -152,26 +152,14 @@
     <div class="row justify-content-center">
       <div class="col-lg-6">
         <div class="section_title text-center">
-          <h3><span>GYPSE</span></h3>
-          <p class="sub_text">Global Youth Program For Social Exchange</p>
+          <h3><span><E-SESSIONS></E-SESSIONS></span></h3>
         </div>
       </div>
     </div>
 
     <!-- Image -->
     <div class="container image_container">
-        <img src="img/Program_img/GYPSE.jpeg" alt="Children Image" class="main_image">
-    </div>
-
-    <!-- Divider -->
-    <div class="divider"></div>
-
-    <!-- About -->
-    <div class="container content_section">
-        <h2>About the Program</h2>
-        <p>Self - awareness is key, but knowledge about other cultures is very beneficial for the youths to 
-            function effectively in this fast paced world. Through GYPSE, we would like to provide a platform to 
-            the youth to connect with youths across countries.</p>
+        <img src="img/Program_img/E-Session.jpeg" alt="Children Image" class="main_image">
     </div>
 
     <!-- Divider -->
@@ -179,15 +167,30 @@
 
     <!-- Objective -->
     <div class="container content_section">
-    <h2>Objective</h2>
+        <h2>About the Program</h2>
+        <p>Interaction and facilitation are two of the most important skills to conduct education and outreach sessions on significant issues. Adore volunteers connect with children at schools and children’s homes to conduct interactive sessions on topics they find difficult to understand or discuss with parents and teachers.</p>
+        <p>The idea is to engage students through knowledge-based, emotion-based and action-based learning, including safety, health and leadership modules.</p>
 
-    <ul class="objective_list">
-        <li>To give a platform to the youths to interact with each other and impart information about different countries.</li>
-        <li>Youths to gain cultural competence/knowledge to possess mutual respect.</li>
-        <li>Youths to build more confidence while interacting with others from different cultural backgrounds.</li>
-        <li>Gain more insight and better understanding of the world around us.</li>
-    </ul>
+        <div class="topic-grid">
+            <div class="topic-card"><h5>Child Safety</h5><p>Creating safe environments and building self-protective confidence.</p></div>
+            <div class="topic-card"><h5>Overcoming Fear</h5><p>Tools to face fears and build courage for everyday challenges.</p></div>
+            <div class="topic-card"><h5>General Awareness</h5><p>Social and civic knowledge for informed students.</p></div>
+            <div class="topic-card"><h5>Public Speaking</h5><p>Clear expression, voice control, and stage presence for youth.</p></div>
+            <div class="topic-card"><h5>Career Choice</h5><p>Pathways and options for students planning their futures.</p></div>
+            <div class="topic-card"><h5>Peer Pressure</h5><p>Leadership, confidence and decision-making under social influence.</p></div>
+            <div class="topic-card"><h5>Health & Hygiene</h5><p>Healthy daily routines and personal care education.</p></div>
+            <div class="topic-card"><h5>Respecting Elders</h5><p>Interpersonal values, empathy and cross-generational support.</p></div>
+            <div class="topic-card"><h5>Teen Issues</h5><p>Emotional intelligence, stress management, and self-awareness.</p></div>
+            <div class="topic-card"><h5>Personality Development</h5><p>Self-confidence, creative thinking, and positive habits.</p></div>
+            <div class="topic-card more"><h5>And Many More...</h5><p>Interactive discussions tailored to student needs and context.</p></div>
+        </div>
+
+        <p>We familiarize students with crucial topics by discussing and enticing them with engaging challenges that create essential classroom learning opportunities.</p>
     </div>
+    <!-- Divider -->
+    <div class="divider"></div>
+
+
 </section>
 
 
