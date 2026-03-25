@@ -1061,7 +1061,6 @@ h3 {
 }
 
 /* line 1, ../../Arafath/CL/january 2020/242. charity/HTML/scss/_header.scss */
-/* REMOVE default spacing */
 body {
   margin: 0;
 }
@@ -1081,7 +1080,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 20px 50px;
+  padding: 12px 50px;
 }
 
 /* Logo */
