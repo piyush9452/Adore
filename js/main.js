@@ -143,6 +143,8 @@ $('.popup-video').magnificPopup({
     activeOverlay: false, // Set CSS color to display scrollUp active point, e.g '#00FFFF'
   });
 
+  // Force all page logos to use ADORE_logo.png
+  $('.logo img, .footer_logo img').attr('src', 'img/ADORE_logo.png');
 
   // blog-page
 
