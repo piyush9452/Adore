@@ -3377,7 +3377,7 @@ body {
 /*What they say start*/
 /* Subtitle */
 .testimonial_section .sub_text {
-  font-size: 14px;
+  font-size: 18px;
   color: #777;
   margin-top: 10px;
 }
@@ -3385,10 +3385,11 @@ body {
 /* Card */
 .testimonial_card {
   background: #fff;
-  padding: 25px;
+  padding: 30px 30px 30px 30px;
   border-radius: 10px;
-  box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+  box-shadow: 0 2px 8px rgba(60, 199, 143, 0.4);
   height: 100%;
+
 }
 
 /* Top section (name + image) */
@@ -3402,7 +3403,7 @@ body {
 /* Name */
 .testimonial_card h4 {
   margin: 0;
-  font-size: 18px;
+  font-size: 20px;
   font-weight: 600;
 }
 
@@ -3414,15 +3415,15 @@ body {
 
 /* Image (top-right circle) */
 .testimonial_card img {
-  width: 50px;
-  height: 50px;
+  width: 70px;
+  height: 70px;
   border-radius: 50%;
   object-fit: cover;
 }
 
 /* Text */
 .testimonial_card p {
-  font-size: 14px;
+  font-size: 16px;
   color: #666;
   line-height: 1.6;
 }
