@@ -1,0 +1,181 @@
+
+/* Wrapper to keep image + name together */
+.image_wrapper {
+  width: 100%;
+}
+
+/* Ensure proper stacking */
+.image_name {
+  display: block;
+  text-align: center;
+  margin-top: 10px;
+}
+
+
+/* ===== Section ===== */
+.media_section {
+  padding: 80px 0;
+  background: #fafafa;
+}
+
+/* ===== Grid Layout (4 in row) ===== */
+.media_grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 40px;
+}
+
+/* ===== Card ===== */
+.media_card {
+  position: relative;
+  border-radius: 16px;
+  overflow: hidden;
+  background: #000;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+  transition: all 0.35s ease;
+}
+
+/* Slight size increase (NOT zoom) */
+.media_card:hover {
+  transform: scale(1.03);
+  box-shadow: 0 20px 45px rgba(0,0,0,0.18);
+}
+
+/* ===== Image ===== */
+.media_card img {
+  width: 100%;
+  height: 100%;
+  aspect-ratio: 3 / 4; /* vertical image */
+  object-fit: cover;
+  display: block;
+  transition: opacity 0.4s ease;
+}
+
+/* Dark overlay effect */
+.media_card:hover img {
+  opacity: 0.25;
+}
+
+/* ===== Overlay Content ===== */
+.media_overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+
+  padding: 20px;
+  opacity: 0;
+  transform: translateY(10px);
+  transition: all 0.4s ease;
+}
+
+/* Show text on hover */
+.media_card:hover .media_overlay {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ===== Text Styling ===== */
+.media_overlay h4 {
+  color: #fff;
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.media_overlay p {
+  color: #f1f1f1;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+/* ===== Border Accent (optional theme touch) ===== */
+.media_card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border: 2px solid transparent;
+  border-radius: 16px;
+  transition: 0.3s;
+}
+
+.media_card:hover::before {
+  border-color: #3CC78F;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 1024px) {
+  .media_grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .media_grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+/* ===== Image Zoom Effect ===== */
+.about_section .image_box img {
+  transition: transform 0.5s ease, opacity 0.4s ease;
+}
+
+/* Zoom + dark fade */
+.about_section .image_box:hover img {
+  transform: scale(1.08);
+  opacity: 0.3;
+}
+
+/* ===== Overlay Text (optional if you add later) ===== */
+.about_section .image_box {
+  position: relative;
+}
+
+/* ===== Open Icon ===== */
+.open_icon {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 35px;
+  height: 35px;
+  background: rgba(255,255,255,0.9);
+  color: #000;
+  border-radius: 50%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 14px;
+  text-decoration: none;
+
+  opacity: 0;
+  transform: scale(0.8);
+  transition: 0.3s ease;
+}
+
+/* Show icon on hover */
+.about_section .image_box:hover .open_icon {
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* Icon hover */
+.open_icon:hover {
+  background: #ff5e14;
+  color: #fff;
+}
+
+/* ===== Name Below Image ===== */
+.image_name {
+  text-align: center;
+  margin-top: 10px;
+  font-size: 15px;
+  font-weight: 600;
+  color: #333;
+}
