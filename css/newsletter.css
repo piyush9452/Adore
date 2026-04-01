@@ -1,0 +1,141 @@
+/* Section Styling */
+.newsletter-section {
+  background: #f8fbf9;
+}
+
+.section-header h2 {
+  color: #1d2b2a;
+}
+
+.section-header p {
+  font-size: 14px;
+}
+
+/* Timeline Base */
+.timeline {
+  position: relative;
+  margin-left: 20px;
+}
+
+/* Vertical Line */
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 20px;
+  top: 0;
+  width: 3px;
+  height: 100%;
+  background: #3CC78F;
+  opacity: 0.3;
+}
+
+/* Year Label */
+.timeline-year {
+  font-weight: 700;
+  margin: 40px 0 20px 60px;
+  color: #3CC78F;
+  font-size: 28px;
+}
+
+/* Timeline Item */
+.timeline-item {
+  position: relative;
+  margin-bottom: 30px;
+}
+
+/* Dot */
+.timeline-item::before {
+  content: '';
+  position: absolute;
+  left: 12px;
+  top: 8px;
+  width: 16px;
+  height: 16px;
+  background: #3CC78F;
+  border-radius: 50%;
+  box-shadow: 0 0 0 4px #e6f7f0;
+}
+
+/* Date */
+.timeline-date {
+  margin-left: 60px;
+  font-weight: 600;
+  font-size: 17px;
+  color: #6c757d;
+  margin-bottom: 8px;
+}
+
+/* Content */
+.timeline-content {
+  margin-left: 60px;
+}
+
+/* Card */
+.newsletter-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #ffffff;
+  padding: 16px 18px;
+  border-radius: 10px;
+  text-decoration: none;
+  color: inherit;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  transition: all 0.3s ease;
+  border-left: 4px solid transparent;
+}
+
+/* Hover Effects */
+.newsletter-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+  border-left: 4px solid #3CC78F;
+}
+
+/* Title */
+.newsletter-card h6 {
+  margin: 0;
+  font-size: 24px;
+  font-weight: 600;
+}
+
+/* Subtext */
+.newsletter-card span {
+  font-size: 14px;
+  color: #888;
+}
+
+/* Icon */
+.newsletter-card .icon {
+  font-size: 26px;
+  transition: transform 0.3s ease;
+}
+
+/* Icon Hover Animation */
+.newsletter-card:hover .icon {
+  transform: scale(1.2);
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+
+  .timeline::before {
+    left: 10px;
+  }
+
+  .timeline-item::before {
+    left: 2px;
+  }
+
+  .timeline-date,
+  .timeline-content,
+  .timeline-year {
+    margin-left: 40px;
+  }
+
+  .newsletter-card {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+}
