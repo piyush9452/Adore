@@ -62,17 +62,17 @@
   background: #fff;
   border-radius: var(--card-radius);
   overflow: hidden;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+  box-shadow: 0 4px 15px rgba(32, 132, 99, 0.3);
   transition: var(--transition);
 }
 
 .activity-card:hover {
   transform: translateY(-8px);
-  box-shadow: 0 12px 30px rgba(0,0,0,0.1);
-  border: 1px solid var(--primary-light); /* subtle brand touch */
+  box-shadow: 0 12px 30px rgba(32, 132, 99,0.5);
+  border: 1px solid var(--primary-light);
 }
 
-/* ================= IMAGE FIX ================= */
+/* ================= IMAGE ================= */
 .activity-img {
   position: relative;
   width: 100%;
