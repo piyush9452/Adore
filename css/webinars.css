@@ -32,29 +32,48 @@
     font-size: 1.05rem;
 }
 .flashcard-deck {
-    max-width: 1160px;
+    max-width: 1100px;
+    width: 100%;
     margin: 0 auto 24px;
-    justify-content: center;
+
     display: flex;
     flex-wrap: nowrap;
     gap: 12px;
-    overflow-x: hidden;
-    padding: 12px 0;
+
+    overflow-x: auto;
+    overflow-y: hidden;
+
+    padding: 12px 4px;
     scroll-snap-type: x mandatory;
-}
-.flashcard-deck::-webkit-scrollbar { height: 8px; }
-.flashcard-deck::-webkit-scrollbar-thumb { background: rgba(44,169,99,.55); border-radius: 999px; }
-@media (max-width: 991px) {
-    .flashcard-deck { overflow-x: auto; }
-}
-@media (min-width: 992px) {
-    .flashcard-deck { overflow-x: hidden; }
+
+    scrollbar-width: medium;
+    scrollbar-color: #3CC78F #edf7f1;
 }
 
-.flashcard-deck::-webkit-scrollbar { height: 8px; }
-.flashcard-deck::-webkit-scrollbar-thumb { background: rgba(31,76,155,.3); border-radius: 999px; }
+
+/* SCROLLBAR */
+.flashcard-deck::-webkit-scrollbar {
+    height: 6px;
+}
+
+.flashcard-deck::-webkit-scrollbar-track {
+    background: #edf7f1;
+    border-radius: 999px;
+}
+
+.flashcard-deck::-webkit-scrollbar-thumb {
+    background: linear-gradient(90deg, #3CC78F, #2ea876);
+    border-radius: 999px;
+    transition: background 0.3s ease;
+}
+
+/* HOVER EFFECT */
+.flashcard-deck::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(90deg, #2ea876, #249964);
+}
+
 .flashcard {
-    min-width: 150px;
+    min-width: 140px;
     flex: 0 0 auto;
     border: 1px solid var(--border);
     border-radius: 14px;

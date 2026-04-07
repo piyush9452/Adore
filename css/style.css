@@ -2973,6 +2973,13 @@ body {
   box-shadow: #3CC78F 0px 10px 20px -10px;
 }
 
+/* Subtitle */
+.reson_area .sub_text {
+  font-size: 17px;
+  color: #6c757d;
+  margin-top: 10px;
+}
+
 /* ================= ICON ================= */
 .icon_box {
   width: 80px;
@@ -3201,84 +3208,125 @@ body {
 }
 /* About section End */
 
-/* Young Start*/
-/* Section spacing */
+/* ================= YOUNG LEADER - FINAL POLISHED ================= */
+
+/* SECTION */
 .program_section {
-  padding: 40px 0;
+  padding: 60px 0; /* increased presence */
 }
 
-/* Image */
+/* IMAGE BOX */
 .program_section .image_box {
   width: 100%;
-  aspect-ratio: 1 / 1;
+  aspect-ratio: 4 / 5; /* slightly vertical for better look */
   display: flex;
   align-items: center;
   justify-content: center;
-  background: #f5f5f5;
-  border-radius: 10px;
+  background: #eef9f4;
+  border-radius: 16px;
   overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
 }
 
 .program_section .image_box img {
-  max-width: 100%;
-  max-height: 100%;
-  object-fit: contain;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
 }
 
-/* CTA below image */
+/* subtle image hover */
+.program_section .image_box:hover img {
+  transform: scale(1.05);
+}
+
+/* CTA */
 .program_section .leader_cta {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-top: 20px;
-  padding: 15px 20px;
-  background: #3CC78F;
+  margin-top: 22px;
+  padding: 16px 22px;
+  background: linear-gradient(135deg, #3CC78F, #2ea876);
   color: #fff;
-  border-radius: 8px;
+  border-radius: 10px;
   text-decoration: none;
-  font-weight: 500;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  box-shadow: 0 8px 20px rgba(60,199,143,0.3);
+  letter-spacing: 0.5px;
 }
 
 .program_section .leader_cta .arrow {
   font-size: 20px;
+  transition: transform 0.3s ease;
 }
 
-/* Text */
+/* CTA hover */
+.program_section .leader_cta:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 28px rgba(60,199,143,0.4);
+}
+
+.program_section .leader_cta:hover .arrow {
+  transform: translateX(5px);
+}
+
+/* TEXT CONTENT */
 .program_section .activites_info {
-  padding-left: 40px;
+  padding-left: 30px;
 }
 
-/* 4 Grid layout */
+.program_section .activites_info h4 {
+  margin-top: 14px;
+  margin-bottom: 10px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+.program_section .para_1 {
+  font-size: 15.5px;
+  line-height: 1.7;
+  color: #555;
+  margin-bottom: 12px;
+}
+
+/* GRID */
 .program_section .activity_grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 15px;
-  margin-top: 20px;
+  gap: 18px;
+  margin-top: 25px;
 }
 
-/* Each card */
+/* CARD */
 .program_section .activity_card {
-  background: #e1f5ee;
-  padding: 15px;
-  border-radius: 8px;
+  background: #ffffff;
+  padding: 18px 18px;
+  border-radius: 12px;
   display: flex;
   align-items: center;
-  gap: 10px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  gap: 12px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.06);
   text-decoration: none;
   color: #333;
-  border: 1px solid rgba(60, 199, 143, 0.3);
-}
-.program_section .activity_card:hover {
-  transform: translateY(-3px);
-  transition: 0.2s;
-  background: #3CC78F;
+  border: 1px solid rgba(60, 199, 143, 0.25);
+  transition: all 0.3s ease;
+  font-weight: 500;
 }
 
-/* Number circle */
+/* HOVER */
+.program_section .activity_card:hover {
+  transform: translateY(-6px);
+  background: linear-gradient(135deg, #3CC78F, #2ea876);
+  color: #fff;
+  box-shadow: 0 12px 28px rgba(0,0,0,0.15);
+}
+
+/* NUMBER */
 .program_section .activity_card .num {
-  width: 30px;
-  height: 30px;
+  width: 34px;
+  height: 34px;
   background: #3CC78F;
   color: #fff;
   border-radius: 50%;
@@ -3286,22 +3334,44 @@ body {
   align-items: center;
   justify-content: center;
   font-size: 14px;
+  font-weight: 600;
+  flex-shrink: 0;
+  transition: all 0.3s ease;
 }
 
+/* number hover sync */
+.program_section .activity_card:hover .num {
+  background: #fff;
+  color: #3CC78F;
+}
 
-/* Mobile */
-@media (max-width: 768px) {
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 992px) {
   .program_section .activites_info {
     padding-left: 0;
-    margin-top: 30px;
-    text-align: center;
+    margin-top: 35px;
+  }
+
+  .program_section .image_box {
+    aspect-ratio: 4 / 4;
+  }
+}
+
+@media (max-width: 600px) {
+  .program_section {
+    padding: 50px 0;
   }
 
   .program_section .activity_grid {
     grid-template-columns: 1fr;
+    gap: 14px;
+  }
+
+  .program_section .para_1 {
+    font-size: 14.5px;
   }
 }
-/* Young End */
 
 /* line 7, ../../Arafath/CL/january 2020/242. charity/HTML/scss/_latest_activites.scss */
 .latest_activites_area {

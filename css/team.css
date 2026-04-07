@@ -42,7 +42,7 @@
   position: relative;
   width: 90%;
   margin: auto;
-  padding: 0 50px;
+  padding: 30px 50px;
 }
 
 /* SLIDER */
@@ -63,10 +63,6 @@
   transition: 0.3s;
 }
 
-.team_card:hover {
-  transform: translateY(-6px);
-}
-
 .team_card.hidden {
   visibility: hidden;
   pointer-events: none;
@@ -82,7 +78,23 @@
   display: block;
 }
 
-/* INFO CARD */
+.team_card:hover .team_info p {
+  color: #e6f7f1;
+}
+
+.team_card:hover .team_info h4 {
+  color: #fff;
+}
+
+.team_card:hover .socials i {
+  color: #fff;
+}
+
+.team_card:hover .socials i:hover {
+  color: #e6f7f1;
+}
+
+/* Team info */
 .team_info {
   position: absolute;
   bottom: -65px;
@@ -94,6 +106,17 @@
   border-radius: 12px;
   box-shadow: 0 12px 30px rgba(0,0,0,0.12);
   z-index: 3;
+  transition: all 0.4s ease;
+  border: 1px solid transparent;
+}
+
+/* HOVER EFFECT */
+.team_card:hover .team_info {
+  transform: translateX(-50%) translateY(-8px);
+  background: #3CC78F;
+  color: #fff;
+  box-shadow: 0 18px 40px rgba(0,0,0,0.18);
+  border-color: #3CC78F;
 }
 
 /* TEXT */
