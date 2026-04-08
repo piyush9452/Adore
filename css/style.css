@@ -1462,87 +1462,57 @@ body {
 }
 /*Contact us end*/
 
-/* ================= BASE BACKGROUND ================= */
-.slider_bg_1 {
-  background-image: url(../img/Home/2.jpeg);
-}
-.slider_bg_2 {
-  background-image: url(../img/Home/1.jpeg);
-}
-.slider_bg_3 {
-  background-image: url(../img/Home/3.jpeg);
-}
-.slider_bg_4 {
-  background-image: url(../img/Home/4.jpeg);
-}
-.slider_bg_5 {
-  background-image: url(../img/Home/4.jpeg);
-}
-/* Base state */
-.slider_bg_1,
-.slider_bg_2,
-.slider_bg_3,
-.slider_bg_4,
-.slider_bg_5 {
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
+/* ================= BACKGROUND IMAGES ================= */
+.slider_bg_1::before { background-image: url(../img/Home/2.jpeg); }
+.slider_bg_2::before { background-image: url(../img/Home/1.jpeg); }
+.slider_bg_3::before { background-image: url(../img/Home/3.jpeg); }
+.slider_bg_4::before { background-image: url(../img/Home/4.jpeg); }
+.slider_bg_5::before { background-image: url(../img/Home/1.jpeg); }
 
-  transform: scale(1.15);
-  transition: transform 5s ease;
-}
-
-/* Active zoom */
-.carousel-item.active .slider_bg_1,
-.carousel-item.active .slider_bg_2,
-.carousel-item.active .slider_bg_3,
-.carousel-item.active .slider_bg_4,
-.carousel-item.active .slider_bg_5 {
-  transform: scale(1.2);
-}
-
-/* ================= CAROUSEL FIX ================= */
-.carousel-inner {
+/* ================= CAROUSEL HEIGHT FIX ================= */
+.carousel,
+.carousel-inner,
+.carousel-item,
+.single_slider {
   height: 100vh;
 }
 
-.carousel-item {
-  height: 100%;
-}
-
-.carousel-item .single_slider {
-  height: 100%;
+@media (max-width: 768px) {
+  .carousel,
+  .carousel-inner,
+  .carousel-item,
+  .single_slider {
+    height: 80vh;
+  }
 }
 
 /* ================= SLIDER BASE ================= */
 .slider_area .single_slider {
-  height: 100vh;
-  min-height: 650px;
   position: relative;
   overflow: hidden;
+  display: flex;
+  align-items: center;
 }
 
-/* ================= ZOOM LAYER ================= */
+/* ================= BACKGROUND LAYER ================= */
 .single_slider::before {
   content: "";
   position: absolute;
-  inset: -5%;
-
-  background: inherit;
+  inset: 0;
 
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
 
-  transform: scale(1.05);
-  transition: transform 5s ease;
+  transform: scale(1); /* NO INITIAL GAP */
+  transition: transform 6s ease;
 
   z-index: 0;
 }
 
-/* ACTIVE ZOOM */
+/* ZOOM EFFECT ONLY WHEN ACTIVE */
 .carousel-item.active .single_slider::before {
-  transform: scale(1.1);
+  transform: scale(1.08);
 }
 
 /* ================= OVERLAY ================= */
@@ -1561,6 +1531,7 @@ body {
 .slider_text {
   position: relative;
   z-index: 2;
+  padding: 0 20px; /* FIX TEXT CUT ISSUE */
   animation: fadeUp 1s ease forwards;
 }
 
@@ -1624,21 +1595,22 @@ body {
 /* ================= RESPONSIVE ================= */
 @media (max-width: 768px) {
 
-  .slider_area .single_slider {
-    height: 75vh;
-  }
-
   .slider_text h3 {
-    font-size: 32px;
+    font-size: 30px;
   }
 
   .slider_text span {
-    font-size: 18px;
+    font-size: 16px;
   }
 
   .boxed-btn3 {
     display: block;
     margin-bottom: 10px;
+  }
+
+  .container {
+    padding-left: 20px;
+    padding-right: 20px;
   }
 }
 
@@ -2374,7 +2346,7 @@ body {
 
 /* line 70, ../../Arafath/CL/january 2020/242. charity/HTML/scss/_footer.scss */
 .footer .footer_top .footer_widget .news_links li .thumb img {
-  width: 98px;
+  width: 250px;
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
   border-radius: 5px;
